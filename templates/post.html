@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <article>
+            <h1 class="mb-4">{{ post.title }}</h1>
+            
+            <div class="d-flex justify-content-between mb-4">
+                <div>
+                    <small class="text-muted">By {{ post.author }}</small>
+                </div>
+                <div>
+                    <small class="text-muted">{{ post.created_at.split('T')[0] }}</small>
+                </div>
+            </div>
+            
+            {% if post.image_url %}
+            <img src="{{ post.image_url }}" class="img-fluid rounded mb-4" alt="{{ post.title }}">
+            {% endif %}
+            
+            <div class="post-content">
+                {{ post.content | safe }}
+            </div>
+            
+            <div class="mt-5">
+                <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </article>
+    </div>
+</div>
+{% endblock %}

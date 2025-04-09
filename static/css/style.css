@@ -1,0 +1,100 @@
+/* Main Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-brand i {
+    margin-right: 8px;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Custom Jumbotron */
+.jumbotron {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    border-radius: 10px;
+}
+
+.jumbotron .btn-primary {
+    background-color: #fff;
+    color: #007bff;
+    border-color: #fff;
+}
+
+.jumbotron .btn-primary:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+/* Post Content */
+.post-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer i {
+    margin-right: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 180px;
+    }
+}

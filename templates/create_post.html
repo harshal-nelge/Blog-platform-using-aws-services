@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Create Post{% endblock %}
+
+{% block content %}
+<div class="card shadow">
+    <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Create New Post</h4>
+    </div>
+    <div class="card-body">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Content</label>
+                <textarea class="form-control" id="content" name="content" rows="6" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image (Optional)</label>
+                <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                <small class="form-text text-muted">Upload an image to be stored in Amazon S3.</small>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Publish Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
