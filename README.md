@@ -37,6 +37,7 @@ AWS_SECRET_KEY = 'your-aws-secret-key'
 AWS_REGION = 'your-region'  # e.g., 'us-east-1'
 
 COGNITO_USER_POOL_ID = 'your-user-pool-id'
+COGNITO_APP_CLIENT_ID = 'your-client-id'
 COGNITO_CLIENT_SECRET = 'your-client-secret'
 DYNAMODB_TABLE_NAME = 'your-dynamodb-table-name'
 S3_BUCKET_NAME = 'your-s3-bucket-name'
