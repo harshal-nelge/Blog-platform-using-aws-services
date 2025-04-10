@@ -3,3 +3,4 @@ venv
 .venv
 aws_config.py
 .env
+.DS_Store
