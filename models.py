@@ -99,7 +99,7 @@ class CognitoManager:
             region_name=aws_config.AWS_REGION  # Use the region from your config
         )
         self.user_pool_id = aws_config.COGNITO_USER_POOL_ID  # Use the actual variable
-        self.client_id = '3oc32mvp068vnut7pdcdgvvcjp'
+        self.client_id = aws_config.COGNITO_APP_CLIENT_ID
         self.client_secret = aws_config.COGNITO_CLIENT_SECRET  # Add this to your aws_config.py
     
     def get_secret_hash(self, username):
